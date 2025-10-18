@@ -1,0 +1,102 @@
+{
+    "exercises": {
+        "terminal": [
+            {
+                "id": "basic-git-commands",
+                "title": "Basic Git Commands",
+                "description": "Practice essential Git commands in the terminal",
+                "tasks": [
+                    {
+                        "id": "init-repo",
+                        "instruction": "Create a new Git repository",
+                        "command": "git init",
+                        "hint": "Use the command that initializes a new Git repository",
+                        "validation": "^git init$"
+                    },
+                    {
+                        "id": "first-commit",
+                        "instruction": "Stage all files and create your first commit with the message 'Initial commit'",
+                        "command": "git add . && git commit -m \"Initial commit\"",
+                        "hint": "First stage all files with 'git add', then commit with a message",
+                        "validation": "^git add .( &&)? git commit -m [\"']Initial commit[\"']$"
+                    }
+                ]
+            },
+            {
+                "id": "branching",
+                "title": "Working with Branches",
+                "description": "Learn to create and manage Git branches",
+                "tasks": [
+                    {
+                        "id": "create-branch",
+                        "instruction": "Create a new branch called 'feature'",
+                        "command": "git branch feature",
+                        "hint": "Use git branch followed by the branch name",
+                        "validation": "^git branch feature$"
+                    },
+                    {
+                        "id": "switch-branch",
+                        "instruction": "Switch to the 'feature' branch",
+                        "command": "git checkout feature",
+                        "hint": "Use git checkout to switch branches",
+                        "validation": "^git checkout feature$"
+                    }
+                ]
+            }
+        ],
+        "gui": [
+            {
+                "id": "stage-changes",
+                "title": "Staging Changes in VS Code",
+                "description": "Learn to use the Source Control tab for staging changes",
+                "steps": [
+                    {
+                        "id": "open-scm",
+                        "instruction": "Open the Source Control tab",
+                        "action": "click",
+                        "target": "source-control-icon",
+                        "validation": "elementVisible"
+                    },
+                    {
+                        "id": "stage-file",
+                        "instruction": "Stage a modified file by clicking the + icon",
+                        "action": "click",
+                        "target": "stage-change-button",
+                        "validation": "elementClicked"
+                    }
+                ]
+            }
+        ],
+        "quizzes": [
+            {
+                "id": "git-basics",
+                "title": "Git Basics Quiz",
+                "description": "Test your knowledge of basic Git concepts",
+                "questions": [
+                    {
+                        "id": "q1",
+                        "question": "What does 'git init' do?",
+                        "options": [
+                            "Creates a new Git repository",
+                            "Initializes a new JavaScript project",
+                            "Installs Git on your computer",
+                            "Creates a new GitHub account"
+                        ],
+                        "correctAnswer": 0
+                    },
+                    {
+                        "id": "q2",
+                        "question": "What command is used to stage changes?",
+                        "options": [
+                            "git commit",
+                            "git add",
+                            "git push",
+                            "git stage"
+                        ],
+                        "correctAnswer": 1
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,124 @@
+<div class="module-content">
+    <h1>Source Control Tab in VS Code</h1>
+    
+    <section class="content-section">
+        <h2>Accessing Source Control</h2>
+        <div class="access-box">
+            <h3>Opening Source Control</h3>
+            <ul>
+                <li>Click the Source Control icon in the Activity Bar (looks like a branch)</li>
+                <li>Use keyboard shortcut: <code>Ctrl+Shift+G</code> (<code>Cmd+Shift+G</code> on macOS)</li>
+                <li>View → Source Control</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Understanding the Interface</h2>
+        <div class="interface-box">
+            <h3>Main Sections</h3>
+            <dl>
+                <dt>Changes</dt>
+                <dd>Shows files you've modified but haven't committed yet</dd>
+                
+                <dt>Staged Changes</dt>
+                <dd>Files you've selected to include in your next commit</dd>
+                
+                <dt>Merge Changes</dt>
+                <dd>Appears when resolving conflicts during merges</dd>
+            </dl>
+
+            <h3>File Status Icons</h3>
+            <table class="status-table">
+                <tr>
+                    <th>Icon</th>
+                    <th>Meaning</th>
+                </tr>
+                <tr>
+                    <td>U</td>
+                    <td>Untracked - New file</td>
+                </tr>
+                <tr>
+                    <td>M</td>
+                    <td>Modified - Changed file</td>
+                </tr>
+                <tr>
+                    <td>D</td>
+                    <td>Deleted file</td>
+                </tr>
+                <tr>
+                    <td>A</td>
+                    <td>Added - Staged new file</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Common Actions</h2>
+        <div class="actions-box">
+            <h3>Working with Changes</h3>
+            <ul>
+                <li><strong>Stage Changes:</strong>
+                    <ul>
+                        <li>Click the + (plus) icon next to a file</li>
+                        <li>Click the + icon in the Changes header to stage all</li>
+                    </ul>
+                </li>
+                <li><strong>Unstage Changes:</strong>
+                    <ul>
+                        <li>Click the - (minus) icon next to a staged file</li>
+                        <li>Click the - icon in the Staged Changes header to unstage all</li>
+                    </ul>
+                </li>
+                <li><strong>Committing:</strong>
+                    <ul>
+                        <li>Type your commit message in the input box</li>
+                        <li>Press <code>Ctrl+Enter</code> (<code>Cmd+Enter</code> on macOS) to commit</li>
+                        <li>Click the checkmark icon to commit</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Viewing Changes</h2>
+        <div class="diff-box">
+            <h3>Diff View Features</h3>
+            <ul>
+                <li><strong>View Changes:</strong> Click any modified file to see changes</li>
+                <li><strong>Side-by-side Diff:</strong> Click the Split Editor icon</li>
+                <li><strong>Line Changes:</strong>
+                    <ul>
+                        <li>Red: Removed lines</li>
+                        <li>Green: Added lines</li>
+                        <li>Blue: Modified lines</li>
+                    </ul>
+                </li>
+                <li><strong>Stage Partial Changes:</strong> Click the + icon next to specific lines</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="practice-exercises">
+        <h3>🏃‍♂️ Practice Exercises</h3>
+        <ol>
+            <li>Make some changes to a file and observe how it appears in the Source Control tab</li>
+            <li>Stage some changes and leave others unstaged</li>
+            <li>View the diff of a modified file</li>
+            <li>Try staging specific lines from a file</li>
+            <li>Write a commit message and make a commit</li>
+        </ol>
+    </div>
+
+    <div class="check-understanding">
+        <h3>📝 Check Your Understanding</h3>
+        <ol>
+            <li>What's the difference between staged and unstaged changes?</li>
+            <li>How can you view the specific changes made to a file?</li>
+            <li>What are the different ways to stage changes?</li>
+            <li>How do you write and complete a commit?</li>
+        </ol>
+    </div>
+</div>

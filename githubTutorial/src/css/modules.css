@@ -1,0 +1,289 @@
+/* Module View Styles */
+.module-view {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.module-navigation {
+    width: 250px;
+    flex-shrink: 0;
+}
+
+.module-navigation h2 {
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.section-list {
+    list-style: none;
+    padding: 0;
+}
+
+.section-list li {
+    margin-bottom: 0.5rem;
+}
+
+.section-list a {
+    display: block;
+    padding: 0.5rem 1rem;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.section-list li.active a {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.section-list a:hover {
+    background-color: #f6f8fa;
+}
+
+.section-list li.active a:hover {
+    background-color: #2c974b;
+}
+
+.module-content-container {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Module Content Styles */
+.module-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.content-section {
+    margin-bottom: 2rem;
+}
+
+.example-box, .scenario-box {
+    background-color: #f6f8fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.check-understanding {
+    background-color: #fff8c5;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+.check-understanding h3 {
+    color: #735c0f;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .module-view {
+        flex-direction: column;
+    }
+
+    .module-navigation {
+        width: 100%;
+    }
+
+    .module-content {
+        padding: 1rem;
+    }
+}
+
+/* OS-specific Content */
+.os-tabs {
+    border: 1px solid #e1e4e8;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.tab-content {
+    padding: 1.5rem;
+}
+
+.tab-content + .tab-content {
+    border-top: 1px solid #e1e4e8;
+}
+
+.tab-content h3 {
+    margin-bottom: 1rem;
+}
+
+/* Code Boxes */
+.code-box {
+    background: #f6f8fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.code-box pre {
+    margin: 0.5rem 0 1rem;
+    padding: 0.5rem;
+    background: #2d2d2d;
+    color: #fff;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+.code-box code {
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Terminology Box */
+.terminology-box {
+    background: #f6f8fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.terminology-box dt {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.terminology-box dd {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* States Box */
+.states-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.state {
+    background: #f6f8fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.state h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+/* Workflow Box */
+.workflow-box {
+    background: #f6f8fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.workflow-box ol {
+    margin-left: 1.5rem;
+}
+
+.workflow-box li {
+    margin-bottom: 0.5rem;
+}
+
+/* Comparison Box */
+.comparison-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    margin: 1rem 0;
+}
+
+.compare-item {
+    background: #f6f8fa;
+    padding: 1.5rem;
+    border-radius: 6px;
+}
+
+.pros li::before {
+    content: "✓";
+    color: #2ea44f;
+    margin-right: 0.5rem;
+}
+
+.cons li::before {
+    content: "✗";
+    color: #cb2431;
+    margin-right: 0.5rem;
+}
+
+.pros, .cons {
+    list-style: none;
+    padding: 0;
+}
+
+/* Command Tables */
+.command-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    background: white;
+}
+
+.command-table th,
+.command-table td {
+    padding: 0.75rem;
+    border: 1px solid #e1e4e8;
+    text-align: left;
+}
+
+.command-table th {
+    background: #f6f8fa;
+    font-weight: bold;
+}
+
+.command-table code {
+    background: #f6f8fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Practice Exercises */
+.practice-exercises {
+    background: #f0fff4;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin: 2rem 0;
+}
+
+.practice-exercises h3 {
+    color: #22863a;
+    margin-bottom: 1rem;
+}
+
+/* Interface Elements */
+.keyboard-shortcuts code {
+    background: #f6f8fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.interface-box dl {
+    margin: 1rem 0;
+}
+
+.interface-box dt {
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-top: 1rem;
+}
+
+.interface-box dd {
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+}

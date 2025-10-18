@@ -1,0 +1,119 @@
+/* Presentation Mode Styles */
+.presentation-mode {
+    overflow: hidden;
+    background-color: #1e1e1e;
+    color: #ffffff;
+}
+
+.presentation-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px 20px;
+    border-radius: 30px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.nav-button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.nav-button:hover {
+    background-color: #2c974b;
+}
+
+#slideCounter {
+    color: #ffffff;
+    font-size: 0.9rem;
+}
+
+.presentation-container {
+    height: 100vh;
+    display: flex;
+}
+
+.slides {
+    flex: 1;
+    padding: 40px;
+    overflow: hidden;
+}
+
+.slide {
+    display: none;
+    height: calc(100vh - 80px);
+    width: 100%;
+    background-color: #ffffff;
+    color: #24292e;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.slide.active {
+    display: block;
+}
+
+.presenter-notes {
+    width: 300px;
+    background-color: #2d2d2d;
+    padding: 20px;
+    overflow-y: auto;
+    font-size: 0.9rem;
+    border-left: 1px solid #444;
+}
+
+.presenter-notes[hidden] {
+    display: none;
+}
+
+/* Slide Content Styles */
+.slide h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.slide h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.slide ul, .slide ol {
+    margin-left: 2rem;
+    margin-bottom: 1rem;
+}
+
+.slide pre {
+    background-color: #f6f8fa;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+.slide img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 1rem auto;
+}
+
+/* Animation */
+.slide {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+.slide.active {
+    opacity: 1;
+}

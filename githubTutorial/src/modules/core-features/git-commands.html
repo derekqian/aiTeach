@@ -1,0 +1,169 @@
+<div class="module-content">
+    <h1>Essential Git Commands</h1>
+    
+    <section class="content-section">
+        <h2>Basic Git Commands</h2>
+        <div class="commands-box">
+            <h3>Repository Setup</h3>
+            <table class="command-table">
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>git init</code></td>
+                    <td>Create a new Git repository</td>
+                    <td><code>git init</code></td>
+                </tr>
+                <tr>
+                    <td><code>git clone</code></td>
+                    <td>Copy a repository from GitHub</td>
+                    <td><code>git clone https://github.com/user/repo.git</code></td>
+                </tr>
+            </table>
+
+            <h3>Basic Operations</h3>
+            <table class="command-table">
+                <tr>
+                    <td><code>git status</code></td>
+                    <td>Check repository status</td>
+                    <td><code>git status</code></td>
+                </tr>
+                <tr>
+                    <td><code>git add</code></td>
+                    <td>Stage changes for commit</td>
+                    <td><code>git add file.txt</code> or <code>git add .</code></td>
+                </tr>
+                <tr>
+                    <td><code>git commit</code></td>
+                    <td>Save staged changes</td>
+                    <td><code>git commit -m "Add new feature"</code></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Working with Branches</h2>
+        <div class="branch-commands">
+            <table class="command-table">
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>git branch</code></td>
+                    <td>List, create, or delete branches</td>
+                    <td><code>git branch feature-login</code></td>
+                </tr>
+                <tr>
+                    <td><code>git checkout</code></td>
+                    <td>Switch branches or restore files</td>
+                    <td><code>git checkout feature-login</code></td>
+                </tr>
+                <tr>
+                    <td><code>git merge</code></td>
+                    <td>Combine branches</td>
+                    <td><code>git merge feature-login</code></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Remote Operations</h2>
+        <div class="remote-commands">
+            <table class="command-table">
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>git remote</code></td>
+                    <td>Manage remote repositories</td>
+                    <td><code>git remote -v</code></td>
+                </tr>
+                <tr>
+                    <td><code>git push</code></td>
+                    <td>Upload changes to remote</td>
+                    <td><code>git push origin main</code></td>
+                </tr>
+                <tr>
+                    <td><code>git pull</code></td>
+                    <td>Download changes from remote</td>
+                    <td><code>git pull origin main</code></td>
+                </tr>
+                <tr>
+                    <td><code>git fetch</code></td>
+                    <td>Get remote changes without merging</td>
+                    <td><code>git fetch origin</code></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Viewing History</h2>
+        <div class="history-commands">
+            <table class="command-table">
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Example</th>
+                </tr>
+                <tr>
+                    <td><code>git log</code></td>
+                    <td>View commit history</td>
+                    <td><code>git log</code> or <code>git log --oneline</code></td>
+                </tr>
+                <tr>
+                    <td><code>git diff</code></td>
+                    <td>Show changes between commits</td>
+                    <td><code>git diff HEAD~1</code></td>
+                </tr>
+                <tr>
+                    <td><code>git show</code></td>
+                    <td>Show commit details</td>
+                    <td><code>git show abc123</code></td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Command Tips</h2>
+        <div class="tips-box">
+            <h3>Helpful Tips</h3>
+            <ul>
+                <li>Use <code>git help command</code> to get help about any command</li>
+                <li>Press <code>Q</code> to exit from log or help pages</li>
+                <li>Use Tab completion to avoid typing full commands</li>
+                <li>Add <code>-h</code> to any command for quick help</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="practice-exercises">
+        <h3>🏃‍♂️ Practice Exercises</h3>
+        <ol>
+            <li>Create a new repository and add some files</li>
+            <li>Make changes and commit them</li>
+            <li>Create a new branch and switch to it</li>
+            <li>Push your changes to a remote repository</li>
+            <li>View the commit history</li>
+        </ol>
+    </div>
+
+    <div class="check-understanding">
+        <h3>📝 Check Your Understanding</h3>
+        <ol>
+            <li>What's the difference between <code>git fetch</code> and <code>git pull</code>?</li>
+            <li>When would you use <code>git branch</code> vs <code>git checkout</code>?</li>
+            <li>What's the typical workflow for committing changes?</li>
+            <li>How can you view the history of your repository?</li>
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,73 @@
+{
+    "modules": [
+        {
+            "id": "intro",
+            "title": "Introduction to Version Control",
+            "description": "Learn the basics of version control and why it matters",
+            "level": "Beginner",
+            "sections": [
+                {
+                    "id": "what-is-vc",
+                    "title": "What is Version Control?",
+                    "content": "intro/what-is-vc.html"
+                },
+                {
+                    "id": "why-git",
+                    "title": "Why Git?",
+                    "content": "intro/why-git.html"
+                },
+                {
+                    "id": "basic-concepts",
+                    "title": "Basic Concepts",
+                    "content": "intro/basic-concepts.html"
+                }
+            ]
+        },
+        {
+            "id": "setup",
+            "title": "VS Code and Git Setup",
+            "description": "Set up your development environment with VS Code and Git",
+            "level": "Beginner",
+            "sections": [
+                {
+                    "id": "install-vscode",
+                    "title": "Installing VS Code",
+                    "content": "setup/install-vscode.html"
+                },
+                {
+                    "id": "install-git",
+                    "title": "Installing Git",
+                    "content": "setup/install-git.html"
+                },
+                {
+                    "id": "git-config",
+                    "title": "Configuring Git",
+                    "content": "setup/git-config.html"
+                }
+            ]
+        },
+        {
+            "id": "core-features",
+            "title": "Using Git in VS Code's Core Features",
+            "description": "Learn to use Git through VS Code's integrated features",
+            "level": "Beginner",
+            "sections": [
+                {
+                    "id": "integrated-terminal",
+                    "title": "Integrated Terminal Essentials",
+                    "content": "core-features/integrated-terminal.html"
+                },
+                {
+                    "id": "source-control",
+                    "title": "Source Control Tab",
+                    "content": "core-features/source-control.html"
+                },
+                {
+                    "id": "git-commands",
+                    "title": "Essential Git Commands",
+                    "content": "core-features/git-commands.html"
+                }
+            ]
+        }
+    ]
+}

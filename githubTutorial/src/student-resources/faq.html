@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - GitHub Tutorial</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/student-resources.css">
+</head>
+<body>
+    <header>
+        <nav class="main-nav">
+            <div class="logo">GitHub Tutorial</div>
+            <div class="nav-links">
+                <a href="../index.html">Home</a>
+                <a href="quick-reference.html">Quick Reference</a>
+                <a href="homework.html">Homework</a>
+                <a href="templates.html">Templates</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="student-resources">
+        <section class="welcome-section">
+            <h1>Frequently Asked Questions</h1>
+            <p>Find answers to common questions about Git, GitHub, and VS Code.</p>
+        </section>
+
+        <section class="faq-section">
+            <article class="faq-item">
+                <h3>How do I undo my last commit?</h3>
+                <p>If you haven't pushed the commit:</p>
+                <pre class="template-code">git reset --soft HEAD~1</pre>
+                <p>This will undo the commit but keep your changes staged. If you want to completely remove the changes:</p>
+                <pre class="template-code">git reset --hard HEAD~1</pre>
+                <p><strong>Note:</strong> Be careful with --hard as it permanently deletes changes!</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>What's the difference between git fetch and git pull?</h3>
+                <p><code>git fetch</code> downloads changes from the remote repository but doesn't merge them into your working files. It's like checking what's new.</p>
+                <p><code>git pull</code> does both: it fetches AND merges the changes into your current branch. It's like fetch + merge in one step.</p>
+            </article>
+
+            <article class="faq-item">
+                <h3>How do I resolve merge conflicts?</h3>
+                <p>When Git can't automatically merge changes, follow these steps:</p>
+                <ol>
+                    <li>Open the conflicted files (marked with <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> markers)</li>
+                    <li>Choose which changes to keep (everything between <code>&lt;&lt;&lt;&lt;&lt;&lt;&lt;</code> and <code>&gt;&gt;&gt;&gt;&gt;&gt;&gt;</code>)</li>
+                    <li>Remove the conflict markers</li>
+                    <li>Save the file</li>
+                    <li>Stage and commit the resolved files</li>
+                </ol>
+            </article>
+
+            <article class="faq-item">
+                <h3>Why can't I push my changes?</h3>
+                <p>Common reasons include:</p>
+                <ul>
+                    <li>Remote has changes you don't have locally (Solution: git pull first)</li>
+                    <li>No upstream branch set (Solution: git push -u origin branch-name)</li>
+                    <li>No write access to repository (Solution: Check permissions)</li>
+                </ul>
+            </article>
+
+            <article class="faq-item">
+                <h3>How do I switch to a different branch?</h3>
+                <p>Use:</p>
+                <pre class="template-code">git checkout branch-name</pre>
+                <p>Or for newer Git versions:</p>
+                <pre class="template-code">git switch branch-name</pre>
+                <p>To create and switch to a new branch in one command:</p>
+                <pre class="template-code">git checkout -b new-branch-name</pre>
+            </article>
+
+            <article class="faq-item">
+                <h3>How do I update my forked repository?</h3>
+                <p>To sync your fork with the original repository:</p>
+                <pre class="template-code"># Add the original repo as upstream
+git remote add upstream original-repo-url
+
+# Fetch changes
+git fetch upstream
+
+# Merge changes into your main branch
+git checkout main
+git merge upstream/main</pre>
+            </article>
+
+            <article class="faq-item">
+                <h3>What should I put in my .gitignore file?</h3>
+                <p>Common entries include:</p>
+                <pre class="template-code"># Dependencies
+node_modules/
+venv/
+
+# Build outputs
+dist/
+build/
+
+# IDE settings
+.vscode/
+.idea/
+
+# Environment variables
+.env
+.env.local
+
+# System files
+.DS_Store
+Thumbs.db</pre>
+            </article>
+
+            <article class="faq-item">
+                <h3>How do I revert to a specific commit?</h3>
+                <p>To create a new commit that undoes a previous commit:</p>
+                <pre class="template-code">git revert commit-hash</pre>
+                <p>To actually go back in time (dangerous with shared repositories):</p>
+                <pre class="template-code">git reset --hard commit-hash</pre>
+            </article>
+
+            <article class="faq-item">
+                <h3>Why use branches?</h3>
+                <p>Branches are useful for:</p>
+                <ul>
+                    <li>Developing features without affecting the main code</li>
+                    <li>Multiple people working on different features simultaneously</li>
+                    <li>Testing experimental changes safely</li>
+                    <li>Creating pull requests for code review</li>
+                </ul>
+            </article>
+
+            <article class="faq-item">
+                <h3>How do I fix "fatal: refusing to merge unrelated histories"?</h3>
+                <p>This happens when trying to merge repositories with no common commit history. To force the merge:</p>
+                <pre class="template-code">git pull origin main --allow-unrelated-histories</pre>
+                <p><strong>Note:</strong> Only use this if you're sure you want to combine the histories!</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 GitHub Tutorial Project</p>
+    </footer>
+
+    <script src="../js/main.js"></script>
+    <script src="js/student-resources.js"></script>
+</body>
+</html>

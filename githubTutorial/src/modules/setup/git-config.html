@@ -1,0 +1,92 @@
+<div class="module-content">
+    <h1>Configuring Git</h1>
+    
+    <section class="content-section">
+        <h2>Initial Setup</h2>
+        <div class="setup-box">
+            <h3>Essential Configuration</h3>
+            <p>Open your terminal in VS Code (Press <code>Ctrl+`</code> or <code>Cmd+`</code>) and set up your identity:</p>
+            <div class="code-box">
+                <pre><code># Set your name
+git config --global user.name "Your Name"
+
+# Set your email
+git config --global user.email "your.email@example.com"</code></pre>
+            </div>
+            <div class="note-box">
+                <p>💡 Use the same email address you'll use for GitHub or other Git services.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Recommended Settings</h2>
+        <div class="settings-box">
+            <h3>Default Branch Name</h3>
+            <div class="code-box">
+                <pre><code>git config --global init.defaultBranch main</code></pre>
+            </div>
+
+            <h3>Default Editor</h3>
+            <div class="code-box">
+                <pre><code>git config --global core.editor "code --wait"</code></pre>
+            </div>
+
+            <h3>Line Endings</h3>
+            <div class="os-tabs">
+                <div class="tab-content windows">
+                    <div class="code-box">
+                        <pre><code>git config --global core.autocrlf true</code></pre>
+                    </div>
+                </div>
+                <div class="tab-content macos linux">
+                    <div class="code-box">
+                        <pre><code>git config --global core.autocrlf input</code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Verifying Your Configuration</h2>
+        <div class="verification-box">
+            <p>Check your settings:</p>
+            <div class="code-box">
+                <pre><code># View all settings
+git config --list
+
+# View specific setting
+git config user.name
+git config user.email</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>VS Code Git Settings</h2>
+        <div class="vscode-settings">
+            <ol>
+                <li>Open VS Code Settings (<code>Ctrl+,</code> or <code>Cmd+,</code>)</li>
+                <li>Search for "git"</li>
+                <li>Recommended settings to enable:
+                    <ul>
+                        <li>Git: Enable Smart Commit</li>
+                        <li>Git: Confirm Sync</li>
+                        <li>Git: Autofetch</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <div class="check-understanding">
+        <h3>📝 Check Your Understanding</h3>
+        <ol>
+            <li>Why is it important to configure your name and email in Git?</li>
+            <li>What's the purpose of setting the default branch name?</li>
+            <li>How can you verify your current Git configuration?</li>
+            <li>What VS Code Git settings might be helpful for beginners?</li>
+        </ol>
+    </div>
+</div>

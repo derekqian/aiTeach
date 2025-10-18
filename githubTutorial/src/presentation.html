@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Tutorial - Presentation Mode</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/presentation.css">
+</head>
+<body class="presentation-mode">
+    <div class="presentation-controls">
+        <button id="prevSlide" class="nav-button">Previous</button>
+        <span id="slideCounter">Slide 1 / 1</span>
+        <button id="nextSlide" class="nav-button">Next</button>
+        <button id="toggleNotes" class="nav-button">Toggle Notes</button>
+    </div>
+
+    <div class="presentation-container">
+        <div class="slides">
+            <!-- Slides will be dynamically loaded here -->
+        </div>
+
+        <div class="presenter-notes" hidden>
+            <!-- Teacher notes will appear here -->
+        </div>
+    </div>
+
+    <script src="js/presentation.js"></script>
+</body>
+</html>

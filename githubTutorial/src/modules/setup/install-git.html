@@ -1,0 +1,98 @@
+<div class="module-content">
+    <h1>Installing Git</h1>
+    
+    <section class="content-section">
+        <h2>Download and Install Git</h2>
+        <div class="os-tabs">
+            <div class="tab-content windows">
+                <h3>Windows Installation</h3>
+                <ol>
+                    <li>Visit <a href="https://git-scm.com" target="_blank">git-scm.com</a></li>
+                    <li>Download the latest Git for Windows installer</li>
+                    <li>Run the installer with these recommended options:
+                        <ul>
+                            <li>Use Git from Git Bash and Windows Command Prompt</li>
+                            <li>Use the OpenSSL library</li>
+                            <li>Checkout Windows-style, commit Unix-style line endings</li>
+                            <li>Use MinTTY terminal</li>
+                            <li>Enable file system caching</li>
+                        </ul>
+                    </li>
+                </ol>
+            </div>
+
+            <div class="tab-content macos">
+                <h3>macOS Installation</h3>
+                <div class="install-options">
+                    <div class="option">
+                        <h4>Option 1: Homebrew (Recommended)</h4>
+                        <div class="code-box">
+                            <pre><code># Install Homebrew first (if not installed)
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install Git
+brew install git</code></pre>
+                        </div>
+                    </div>
+                    <div class="option">
+                        <h4>Option 2: Command Line Tools</h4>
+                        <p>Open Terminal and run:</p>
+                        <div class="code-box">
+                            <pre><code>xcode-select --install</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content linux">
+                <h3>Linux Installation</h3>
+                <div class="code-box">
+                    <p>Ubuntu/Debian:</p>
+                    <pre><code>sudo apt update
+sudo apt install git</code></pre>
+                    
+                    <p>Fedora:</p>
+                    <pre><code>sudo dnf install git</code></pre>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Verifying the Installation</h2>
+        <div class="verification-box">
+            <p>Open your terminal (Command Prompt, Terminal, or Git Bash) and run:</p>
+            <div class="code-box">
+                <pre><code>git --version</code></pre>
+            </div>
+            <p>You should see something like: <code>git version 2.40.0</code></p>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>VS Code Integration</h2>
+        <div class="info-box">
+            <p>After installing Git:</p>
+            <ol>
+                <li>Open VS Code</li>
+                <li>The Source Control icon should appear in the sidebar</li>
+                <li>Click it to start using Git in VS Code</li>
+            </ol>
+            <p>If you don't see the Source Control icon, try:</p>
+            <ul>
+                <li>Restarting VS Code</li>
+                <li>Verifying Git is in your system's PATH</li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="check-understanding">
+        <h3>📝 Check Your Understanding</h3>
+        <ol>
+            <li>How can you verify that Git is properly installed?</li>
+            <li>What installation options are recommended for your operating system?</li>
+            <li>How does VS Code know that Git is installed?</li>
+            <li>What should you do if VS Code doesn't detect Git?</li>
+        </ol>
+    </div>
+</div>

@@ -1,0 +1,239 @@
+/* Student Resources Styles */
+.student-resources {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.welcome-section {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.welcome-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Download Buttons */
+.download-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.download-button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.2s ease;
+}
+
+.download-button:hover {
+    background-color: #2c974b;
+}
+
+/* Reference Cards */
+.reference-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.reference-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+    border-bottom: 2px solid #e1e4e8;
+    padding-bottom: 0.5rem;
+}
+
+.reference-card h3 {
+    margin: 1.5rem 0 1rem;
+    color: var(--secondary-color);
+}
+
+/* Command Tables */
+.command-table, .shortcut-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.command-table td, .shortcut-table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.command-table code, .shortcut-table code {
+    background: #f6f8fa;
+    padding: 0.2rem 0.4rem;
+    border-radius: 3px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Workflow Steps */
+.workflow-steps {
+    list-style: none;
+    padding: 0;
+    counter-reset: step;
+}
+
+.workflow-steps li {
+    position: relative;
+    padding: 0.5rem 0 0.5rem 2rem;
+    counter-increment: step;
+}
+
+.workflow-steps li::before {
+    content: counter(step);
+    position: absolute;
+    left: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.8rem;
+}
+
+/* Tips Section */
+.tips-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+}
+
+.tip {
+    background: #f6f8fa;
+    padding: 1rem;
+    border-radius: 6px;
+}
+
+.tip h3 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+}
+
+.tip code {
+    display: block;
+    background: #2d2d2d;
+    color: #fff;
+    padding: 0.75rem;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+/* Homework Assignments */
+.assignment-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.assignment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #e1e4e8;
+}
+
+.assignment-meta {
+    display: flex;
+    gap: 2rem;
+    color: #586069;
+    font-size: 0.9rem;
+}
+
+.requirements-list {
+    margin: 1rem 0;
+    padding-left: 1.5rem;
+}
+
+.submission-guidelines {
+    background: #f6f8fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin-top: 1rem;
+}
+
+/* Project Templates */
+.template-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.template-preview {
+    background: #f6f8fa;
+    padding: 1rem;
+    border-radius: 6px;
+    margin: 1rem 0;
+}
+
+.template-code {
+    background: #2d2d2d;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 4px;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    overflow-x: auto;
+}
+
+/* FAQ Styles */
+.faq-section {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+    margin: 0;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .student-resources {
+        padding: 1rem;
+    }
+
+    .download-buttons {
+        flex-direction: column;
+    }
+
+    .tips-section {
+        grid-template-columns: 1fr;
+    }
+
+    .assignment-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .assignment-meta {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
