@@ -362,3 +362,439 @@
     background-color: transparent;
     padding: 0;
 }
+
+/* Animation Styles for Enhanced Slides */
+
+/* Title Slide Animations */
+.title-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.animate-bounce {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-30px); }
+    60% { transform: translateY(-15px); }
+}
+
+.floating-icons {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.floating-icons span {
+    font-size: 2rem;
+}
+
+.animate-float-1 { animation: float 3s ease-in-out infinite; }
+.animate-float-2 { animation: float 3s ease-in-out infinite 0.5s; }
+.animate-float-3 { animation: float 3s ease-in-out infinite 1s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+/* Concept Examples Layout */
+.concept-examples {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.example-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--primary-color);
+    transform: translateX(-100px);
+    opacity: 0;
+}
+
+.example-icon {
+    font-size: 3rem;
+    flex-shrink: 0;
+}
+
+.example-item span {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+}
+
+.animate-slide-in-1 { animation: slideInLeft 0.8s ease-out 0.2s forwards; }
+.animate-slide-in-2 { animation: slideInLeft 0.8s ease-out 0.6s forwards; }
+.animate-slide-in-3 { animation: slideInLeft 0.8s ease-out 1s forwards; }
+
+@keyframes slideInLeft {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Problems/Solutions Animation */
+.problem-icon, .solution-icon {
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.bullet-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+.animate-slide-left {
+    animation: slideInFromLeft 1s ease-out;
+}
+
+.animate-slide-right {
+    animation: slideInFromRight 1s ease-out;
+}
+
+@keyframes slideInFromLeft {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Key Concepts Visual Layout */
+.concepts-visual {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.concept-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 3px solid var(--primary-color);
+    transform: scale(0);
+    opacity: 0;
+}
+
+.concept-visual {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.concept-text {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+}
+
+.animate-zoom-in-1 { animation: zoomIn 0.6s ease-out 0.2s forwards; }
+.animate-zoom-in-2 { animation: zoomIn 0.6s ease-out 0.4s forwards; }
+.animate-zoom-in-3 { animation: zoomIn 0.6s ease-out 0.6s forwards; }
+.animate-zoom-in-4 { animation: zoomIn 0.6s ease-out 0.8s forwards; }
+
+@keyframes zoomIn {
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Git Workflow Visual */
+.git-workflow {
+    margin-top: 2rem;
+}
+
+.workflow-steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.workflow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 3px solid var(--primary-color);
+    min-width: 200px;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.step-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.step-info code {
+    background: #e9ecef;
+    padding: 0.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.step-info span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.workflow-arrow {
+    font-size: 2rem;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.animate-step-1 { animation: slideUp 0.8s ease-out 0.2s forwards; }
+.animate-step-2 { animation: slideUp 0.8s ease-out 0.6s forwards; }
+.animate-step-3 { animation: slideUp 0.8s ease-out 1s forwards; }
+.animate-step-4 { animation: slideUp 0.8s ease-out 1.4s forwards; }
+
+@keyframes slideUp {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* GUI Features Layout */
+.gui-features {
+    margin-top: 2rem;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    opacity: 0;
+}
+
+.feature-icon {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.feature-text {
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.animate-fade-in-1 { animation: fadeIn 0.8s ease-out 0.2s forwards; }
+.animate-fade-in-2 { animation: fadeIn 0.8s ease-out 0.6s forwards; }
+.animate-fade-in-3 { animation: fadeIn 0.8s ease-out 1s forwards; }
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+.vs-code-mockup {
+    background: #2d2d2d;
+    color: white;
+    border-radius: 8px;
+    margin-top: 2rem;
+    overflow: hidden;
+    transform: translateY(50px);
+    opacity: 0;
+}
+
+.mockup-header {
+    background: #404040;
+    padding: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #555;
+}
+
+.mockup-content {
+    padding: 1.5rem;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    line-height: 2;
+}
+
+.animate-slide-up {
+    animation: slideUpIn 1s ease-out 1.4s forwards;
+}
+
+@keyframes slideUpIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Practice Goals Layout */
+.practice-goals {
+    margin-top: 2rem;
+}
+
+.goals-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.goal-item {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    background: #f8f9fa;
+    padding: 2rem;
+    border-radius: 12px;
+    border-left: 6px solid var(--primary-color);
+    transform: scale(0.5);
+    opacity: 0;
+}
+
+.goal-icon {
+    font-size: 2.5rem;
+    flex-shrink: 0;
+}
+
+.goal-text {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.animate-bounce-in-1 { animation: bounceIn 0.8s ease-out 0.2s forwards; }
+.animate-bounce-in-2 { animation: bounceIn 0.8s ease-out 0.4s forwards; }
+.animate-bounce-in-3 { animation: bounceIn 0.8s ease-out 0.6s forwards; }
+.animate-bounce-in-4 { animation: bounceIn 0.8s ease-out 0.8s forwards; }
+
+@keyframes bounceIn {
+    0% {
+        transform: scale(0.3);
+        opacity: 0;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    70% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.encouragement {
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--primary-color);
+    font-weight: bold;
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: linear-gradient(135deg, #e3f2fd, #f0fff4);
+    border-radius: 12px;
+}
+
+.animate-pulse {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.practice-emoji {
+    display: inline-block;
+}
+
+.animate-wiggle {
+    animation: wiggle 1s ease-in-out infinite;
+}
+
+@keyframes wiggle {
+    0%, 100% { transform: rotate(0deg); }
+    25% { transform: rotate(-10deg); }
+    75% { transform: rotate(10deg); }
+}
+
+/* Responsive Design for New Layouts */
+@media (max-width: 1024px) {
+    .workflow-steps {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .workflow-arrow {
+        transform: rotate(90deg);
+    }
+
+    .concepts-visual {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .floating-icons {
+        gap: 1.5rem;
+    }
+
+    .floating-icons span {
+        font-size: 1.5rem;
+    }
+
+    .goals-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .example-item {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
