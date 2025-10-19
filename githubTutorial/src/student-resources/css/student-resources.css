@@ -2,6 +2,7 @@
 .student-resources {
     max-width: 1200px;
     margin: 0 auto;
+    margin-top: 90px; /* Account for fixed navigation height */
     padding: 2rem;
 }
 
@@ -18,22 +19,36 @@
 /* Download Buttons */
 .download-buttons {
     display: flex;
-    gap: 1rem;
     justify-content: center;
-    margin-top: 2rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .download-button {
     background-color: var(--primary-color);
     color: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 4px;
     text-decoration: none;
+    border-radius: 6px;
+    font-weight: 500;
     transition: background-color 0.2s ease;
 }
 
 .download-button:hover {
     background-color: #2c974b;
+}
+
+.download-placeholder {
+    background-color: #f6f8fa;
+    color: #6a737d;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    border: 1px dashed #d1d5da;
+}
+
+.placeholder-text {
+    font-style: italic;
 }
 
 /* Reference Cards */

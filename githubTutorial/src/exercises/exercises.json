@@ -2,66 +2,269 @@
     "exercises": {
         "terminal": [
             {
-                "id": "basic-git-commands",
-                "title": "Basic Git Commands",
-                "description": "Practice essential Git commands in the terminal",
+                "id": "git-setup",
+                "title": "Git Repository Setup",
+                "description": "Learn to create and clone repositories using Git commands",
                 "tasks": [
                     {
                         "id": "init-repo",
-                        "instruction": "Create a new Git repository",
+                        "instruction": "Initialize a new Git repository in the current directory",
                         "command": "git init",
                         "hint": "Use the command that initializes a new Git repository",
                         "validation": "^git init$"
                     },
                     {
-                        "id": "first-commit",
-                        "instruction": "Stage all files and create your first commit with the message 'Initial commit'",
-                        "command": "git add . && git commit -m \"Initial commit\"",
-                        "hint": "First stage all files with 'git add', then commit with a message",
-                        "validation": "^git add .( &&)? git commit -m [\"']Initial commit[\"']$"
+                        "id": "clone-repo",
+                        "instruction": "Clone a repository from GitHub (use any GitHub URL)",
+                        "command": "git clone https://github.com/user/repo.git",
+                        "hint": "Use 'git clone' followed by a repository URL",
+                        "validation": "^git clone https://github\\.com/.+"
                     }
                 ]
             },
             {
-                "id": "branching",
-                "title": "Working with Branches",
-                "description": "Learn to create and manage Git branches",
+                "id": "basic-git-commands",
+                "title": "Essential Git Operations",
+                "description": "Master the fundamental Git commands for daily workflow",
                 "tasks": [
+                    {
+                        "id": "check-status",
+                        "instruction": "Check the status of your repository",
+                        "command": "git status",
+                        "hint": "Use the command that shows the current state of your repository",
+                        "validation": "^git status$"
+                    },
+                    {
+                        "id": "stage-all",
+                        "instruction": "Stage all changes in the current directory",
+                        "command": "git add .",
+                        "hint": "Use 'git add' with a dot to stage all files",
+                        "validation": "^git add \\.$"
+                    },
+                    {
+                        "id": "first-commit",
+                        "instruction": "Create your first commit with the message 'Initial commit'",
+                        "command": "git commit -m \"Initial commit\"",
+                        "hint": "Use 'git commit -m' followed by your message in quotes",
+                        "validation": "^git commit -m [\"']Initial commit[\"']$"
+                    },
+                    {
+                        "id": "stage-specific",
+                        "instruction": "Stage a specific file called 'README.md'",
+                        "command": "git add README.md",
+                        "hint": "Use 'git add' followed by the filename",
+                        "validation": "^git add README\\.md$"
+                    }
+                ]
+            },
+            {
+                "id": "branching-workflow",
+                "title": "Branch Management",
+                "description": "Learn to create, switch, and merge branches effectively",
+                "tasks": [
+                    {
+                        "id": "list-branches",
+                        "instruction": "List all branches in your repository",
+                        "command": "git branch",
+                        "hint": "Use the command that shows all local branches",
+                        "validation": "^git branch$"
+                    },
                     {
                         "id": "create-branch",
                         "instruction": "Create a new branch called 'feature'",
                         "command": "git branch feature",
-                        "hint": "Use git branch followed by the branch name",
+                        "hint": "Use 'git branch' followed by the new branch name",
                         "validation": "^git branch feature$"
                     },
                     {
                         "id": "switch-branch",
                         "instruction": "Switch to the 'feature' branch",
                         "command": "git checkout feature",
-                        "hint": "Use git checkout to switch branches",
+                        "hint": "Use 'git checkout' to switch branches",
                         "validation": "^git checkout feature$"
+                    },
+                    {
+                        "id": "create-and-switch",
+                        "instruction": "Create and switch to a new branch called 'bugfix' in one command",
+                        "command": "git checkout -b bugfix",
+                        "hint": "Use 'git checkout -b' followed by the branch name",
+                        "validation": "^git checkout -b bugfix$"
+                    },
+                    {
+                        "id": "merge-branch",
+                        "instruction": "Merge the 'feature' branch into the current branch",
+                        "command": "git merge feature",
+                        "hint": "Use 'git merge' followed by the branch name to merge",
+                        "validation": "^git merge feature$"
+                    }
+                ]
+            },
+            {
+                "id": "remote-operations",
+                "title": "Working with Remote Repositories",
+                "description": "Learn to synchronize your work with remote repositories",
+                "tasks": [
+                    {
+                        "id": "add-remote",
+                        "instruction": "Add a remote repository called 'origin' with URL https://github.com/user/repo.git",
+                        "command": "git remote add origin https://github.com/user/repo.git",
+                        "hint": "Use 'git remote add' followed by the remote name and URL",
+                        "validation": "^git remote add origin https://github\\.com/.+"
+                    },
+                    {
+                        "id": "fetch-changes",
+                        "instruction": "Fetch changes from the remote repository",
+                        "command": "git fetch",
+                        "hint": "Use the command that downloads changes without merging them",
+                        "validation": "^git fetch$"
+                    },
+                    {
+                        "id": "push-changes",
+                        "instruction": "Push your current branch to the remote repository",
+                        "command": "git push",
+                        "hint": "Use the command that uploads your local changes",
+                        "validation": "^git push"
+                    },
+                    {
+                        "id": "pull-changes",
+                        "instruction": "Pull changes from the remote repository",
+                        "command": "git pull",
+                        "hint": "Use the command that downloads and merges remote changes",
+                        "validation": "^git pull$"
+                    }
+                ]
+            },
+            {
+                "id": "terminal-navigation",
+                "title": "Terminal Navigation & Git Integration",
+                "description": "Master terminal navigation and Git command efficiency",
+                "tasks": [
+                    {
+                        "id": "check-log",
+                        "instruction": "View the commit history in a condensed format",
+                        "command": "git log --oneline",
+                        "hint": "Use 'git log' with the oneline flag for condensed output",
+                        "validation": "^git log --oneline$"
+                    },
+                    {
+                        "id": "show-diff",
+                        "instruction": "Show differences between working directory and staging area",
+                        "command": "git diff",
+                        "hint": "Use the command that shows changes in your working directory",
+                        "validation": "^git diff$"
+                    },
+                    {
+                        "id": "unstage-file",
+                        "instruction": "Unstage a file called 'test.txt'",
+                        "command": "git reset test.txt",
+                        "hint": "Use 'git reset' followed by the filename to unstage",
+                        "validation": "^git reset test\\.txt$"
                     }
                 ]
             }
         ],
         "gui": [
             {
-                "id": "stage-changes",
-                "title": "Staging Changes in VS Code",
-                "description": "Learn to use the Source Control tab for staging changes",
+                "id": "source-control-basics",
+                "title": "Source Control Tab Overview",
+                "description": "Learn to navigate and use VS Code's Source Control interface",
                 "steps": [
                     {
                         "id": "open-scm",
-                        "instruction": "Open the Source Control tab",
+                        "instruction": "Click on the Source Control icon in the Activity Bar",
                         "action": "click",
                         "target": "source-control-icon",
                         "validation": "elementVisible"
                     },
                     {
+                        "id": "view-changes",
+                        "instruction": "Observe the changes list showing modified files",
+                        "action": "observe",
+                        "target": "changes-list",
+                        "validation": "elementVisible"
+                    }
+                ]
+            },
+            {
+                "id": "staging-workflow",
+                "title": "Visual Staging Operations",
+                "description": "Practice staging and unstaging files using the GUI",
+                "steps": [
+                    {
                         "id": "stage-file",
-                        "instruction": "Stage a modified file by clicking the + icon",
+                        "instruction": "Stage a file by clicking the + (plus) button next to it",
                         "action": "click",
                         "target": "stage-change-button",
+                        "validation": "elementClicked"
+                    },
+                    {
+                        "id": "stage-all",
+                        "instruction": "Stage all changes by clicking the + button in the Changes header",
+                        "action": "click",
+                        "target": "stage-all-button",
+                        "validation": "elementClicked"
+                    }
+                ]
+            },
+            {
+                "id": "commit-workflow",
+                "title": "Committing Changes via GUI",
+                "description": "Learn to create commits using VS Code's interface",
+                "steps": [
+                    {
+                        "id": "write-message",
+                        "instruction": "Type a commit message in the message box",
+                        "action": "type",
+                        "target": "commit-message-input",
+                        "validation": "inputFilled"
+                    },
+                    {
+                        "id": "commit-staged",
+                        "instruction": "Click the checkmark to commit your staged changes",
+                        "action": "click",
+                        "target": "commit-button",
+                        "validation": "elementClicked"
+                    }
+                ]
+            },
+            {
+                "id": "branch-management-gui",
+                "title": "Branch Operations in VS Code",
+                "description": "Use VS Code's GUI for branch creation and switching",
+                "steps": [
+                    {
+                        "id": "branch-indicator",
+                        "instruction": "Click on the branch indicator in the status bar",
+                        "action": "click",
+                        "target": "branch-indicator",
+                        "validation": "elementClicked"
+                    },
+                    {
+                        "id": "create-branch-gui",
+                        "instruction": "Select 'Create new branch' from the command palette",
+                        "action": "click",
+                        "target": "create-branch-option",
+                        "validation": "elementClicked"
+                    }
+                ]
+            },
+            {
+                "id": "diff-viewing",
+                "title": "Visual Diff Comparison",
+                "description": "Learn to view file differences using VS Code's diff viewer",
+                "steps": [
+                    {
+                        "id": "open-diff",
+                        "instruction": "Click on a modified file to open the diff view",
+                        "action": "click",
+                        "target": "modified-file",
+                        "validation": "elementClicked"
+                    },
+                    {
+                        "id": "navigate-changes",
+                        "instruction": "Use the navigation arrows to move between changes",
+                        "action": "click",
+                        "target": "diff-navigation",
                         "validation": "elementClicked"
                     }
                 ]
@@ -69,15 +272,15 @@
         ],
         "quizzes": [
             {
-                "id": "git-basics",
-                "title": "Git Basics Quiz",
-                "description": "Test your knowledge of basic Git concepts",
+                "id": "git-fundamentals",
+                "title": "Git Fundamentals Quiz",
+                "description": "Test your understanding of basic Git concepts and commands",
                 "questions": [
                     {
                         "id": "q1",
                         "question": "What does 'git init' do?",
                         "options": [
-                            "Creates a new Git repository",
+                            "Creates a new Git repository in the current directory",
                             "Initializes a new JavaScript project",
                             "Installs Git on your computer",
                             "Creates a new GitHub account"
@@ -86,7 +289,7 @@
                     },
                     {
                         "id": "q2",
-                        "question": "What command is used to stage changes?",
+                        "question": "Which command is used to stage changes for commit?",
                         "options": [
                             "git commit",
                             "git add",
@@ -94,6 +297,148 @@
                             "git stage"
                         ],
                         "correctAnswer": 1
+                    },
+                    {
+                        "id": "q3",
+                        "question": "What is the purpose of 'git status'?",
+                        "options": [
+                            "To create a new commit",
+                            "To show the current state of the working directory and staging area",
+                            "To push changes to remote repository",
+                            "To merge branches"
+                        ],
+                        "correctAnswer": 1
+                    },
+                    {
+                        "id": "q4",
+                        "question": "How do you create and switch to a new branch in one command?",
+                        "options": [
+                            "git branch new-branch",
+                            "git switch new-branch",
+                            "git checkout -b new-branch",
+                            "git create new-branch"
+                        ],
+                        "correctAnswer": 2
+                    }
+                ]
+            },
+            {
+                "id": "branching-concepts",
+                "title": "Branching and Merging Quiz",
+                "description": "Test your knowledge of Git branching and merging workflows",
+                "questions": [
+                    {
+                        "id": "b1",
+                        "question": "What happens when you run 'git merge feature-branch'?",
+                        "options": [
+                            "Creates a new branch called feature-branch",
+                            "Deletes the feature-branch",
+                            "Combines changes from feature-branch into the current branch",
+                            "Switches to feature-branch"
+                        ],
+                        "correctAnswer": 2
+                    },
+                    {
+                        "id": "b2",
+                        "question": "Which command lists all local branches?",
+                        "options": [
+                            "git branch",
+                            "git list",
+                            "git show branches",
+                            "git branches"
+                        ],
+                        "correctAnswer": 0
+                    },
+                    {
+                        "id": "b3",
+                        "question": "What is the main benefit of using branches?",
+                        "options": [
+                            "Makes commits faster",
+                            "Reduces file size",
+                            "Allows parallel development without affecting main code",
+                            "Automatically backs up your code"
+                        ],
+                        "correctAnswer": 2
+                    }
+                ]
+            },
+            {
+                "id": "remote-operations-quiz",
+                "title": "Remote Repository Operations",
+                "description": "Assess your understanding of working with remote repositories",
+                "questions": [
+                    {
+                        "id": "r1",
+                        "question": "What is the difference between 'git fetch' and 'git pull'?",
+                        "options": [
+                            "No difference, they do the same thing",
+                            "git fetch downloads changes but doesn't merge; git pull downloads and merges",
+                            "git fetch is faster than git pull",
+                            "git pull is only for pushing changes"
+                        ],
+                        "correctAnswer": 1
+                    },
+                    {
+                        "id": "r2",
+                        "question": "Which command uploads your local commits to a remote repository?",
+                        "options": [
+                            "git upload",
+                            "git send",
+                            "git push",
+                            "git sync"
+                        ],
+                        "correctAnswer": 2
+                    },
+                    {
+                        "id": "r3",
+                        "question": "What does 'origin' typically refer to?",
+                        "options": [
+                            "The first commit in a repository",
+                            "The main branch",
+                            "The default name for the remote repository",
+                            "The original author of the code"
+                        ],
+                        "correctAnswer": 2
+                    }
+                ]
+            },
+            {
+                "id": "vscode-integration",
+                "title": "VS Code Git Integration",
+                "description": "Test your knowledge of using Git within VS Code",
+                "questions": [
+                    {
+                        "id": "v1",
+                        "question": "Where can you find the Source Control features in VS Code?",
+                        "options": [
+                            "In the File menu",
+                            "In the Activity Bar (left sidebar)",
+                            "In the status bar at the bottom",
+                            "In the terminal only"
+                        ],
+                        "correctAnswer": 1
+                    },
+                    {
+                        "id": "v2",
+                        "question": "What does the '+' button next to a file in Source Control do?",
+                        "options": [
+                            "Creates a new file",
+                            "Deletes the file",
+                            "Stages the file for commit",
+                            "Opens the file in a new tab"
+                        ],
+                        "correctAnswer": 2
+                    },
+                    {
+                        "id": "v3",
+                        "question": "How can you view the differences in a modified file using VS Code?",
+                        "options": [
+                            "Right-click and select 'Compare'",
+                            "Click on the file in the Source Control panel",
+                            "Use Ctrl+D",
+                            "All of the above"
+                        ],
+                        "correctAnswer": 3
                     }
                 ]
             }

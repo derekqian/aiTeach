@@ -1,3 +1,619 @@
+/* Exercise Page Styles */
+.exercise-types {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.exercise-category {
+    margin-bottom: 3rem;
+}
+
+.exercise-category h2 {
+    color: var(--primary-color);
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.exercise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+/* Exercise Cards */
+.exercise-card {
+    background: white;
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-left: 4px solid var(--primary-color);
+}
+
+.exercise-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.exercise-card h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.exercise-card p {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.exercise-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+.exercise-meta span {
+    background: #f0f0f0;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+.start-exercise {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+    width: 100%;
+}
+
+.start-exercise:hover {
+    background: #2c974b;
+}
+
+/* Exercise Content Area */
+#exerciseContent {
+    max-width: 1400px;
+    margin: 2rem auto;
+    padding: 0 2rem;
+}
+
+/* Improved Exercise Container for New Layout */
+.terminal-exercise .exercise-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.exercise-header {
+    background: linear-gradient(135deg, var(--primary-color), #2c974b);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+}
+
+.exercise-header h2 {
+    margin: 0 0 1rem 0;
+    font-size: 2rem;
+}
+
+.exercise-header p {
+    margin: 0;
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* Two-Column Workspace Layout */
+.exercise-workspace {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 600px;
+}
+
+.terminal-section {
+    background: #f8f9fa;
+    padding: 1.5rem;
+    border-right: 1px solid #e1e4e8;
+}
+
+.tasks-section {
+    padding: 1.5rem;
+    background: white;
+    overflow-y: auto;
+    max-height: 600px;
+}
+
+/* Terminal Simulator Improvements */
+.terminal-exercise .terminal-simulator {
+    background: #1e1e1e;
+    border-radius: 8px;
+    overflow: hidden;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background: #2d2d2d;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #404040;
+}
+
+.terminal-title {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+
+.clear-terminal {
+    background: #404040;
+    color: white;
+    border: none;
+    padding: 0.25rem 0.75rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.clear-terminal:hover {
+    background: #505050;
+}
+
+.terminal-exercise .terminal-output {
+    flex: 1;
+    padding: 1rem;
+    color: #00ff00;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    overflow-y: auto;
+    white-space: pre-wrap;
+    line-height: 1.4;
+}
+
+.terminal-exercise .terminal-input {
+    padding: 1rem;
+    border-top: 1px solid #404040;
+    display: flex;
+    align-items: center;
+}
+
+.terminal-exercise .prompt {
+    color: #00ff00;
+    margin-right: 0.5rem;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+}
+
+.terminal-exercise .command-input {
+    flex: 1;
+    background: transparent;
+    border: none;
+    color: white;
+    font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+/* Current Task Display */
+.current-task {
+    background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+    border: 2px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.current-task h3 {
+    color: var(--primary-color);
+    margin: 0 0 1rem 0;
+    font-size: 1.2rem;
+}
+
+.current-task-instruction {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.current-hint-button {
+    background: #6c757d;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.current-hint-button:hover {
+    background: #5a6268;
+}
+
+.current-hint {
+    background: #fff3cd;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 4px;
+    border-left: 4px solid #ffc107;
+    color: #856404;
+    line-height: 1.5;
+}
+
+/* Progress Bar */
+.task-progress {
+    margin-bottom: 2rem;
+}
+
+.task-progress h4 {
+    color: var(--secondary-color);
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+}
+
+.progress-bar {
+    background: #e9ecef;
+    border-radius: 10px;
+    height: 8px;
+    overflow: hidden;
+    margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+    background: linear-gradient(90deg, var(--primary-color), #2c974b);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+/* Task List Improvements */
+.terminal-exercise .task-list h4 {
+    color: var(--secondary-color);
+    margin: 0 0 1rem 0;
+    font-size: 1rem;
+}
+
+.terminal-exercise .task {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1rem;
+    margin-bottom: 0.75rem;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    background: #f8f9fa;
+}
+
+.terminal-exercise .task:hover {
+    background: #e9ecef;
+    border-color: #dee2e6;
+}
+
+.terminal-exercise .task.active {
+    background: #e3f2fd;
+    border-color: var(--primary-color);
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(46, 164, 79, 0.15);
+}
+
+.terminal-exercise .task.completed {
+    background: #d4edda;
+    border-color: #28a745;
+    padding: 0.5rem 1rem; /* More compact padding */
+    margin-bottom: 0.5rem; /* Reduced margin */
+    opacity: 0.8;
+    transform: scale(0.95); /* Slightly smaller */
+}
+
+.terminal-exercise .task.completed:hover {
+    background: #c3e6cb;
+    transform: scale(0.97); /* Slight hover effect even when completed */
+}
+
+.task-number {
+    background: var(--primary-color);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+    transition: all 0.3s ease;
+}
+
+.terminal-exercise .task.completed .task-number {
+    background: #28a745;
+    width: 24px; /* Smaller when completed */
+    height: 24px;
+    font-size: 0.8rem;
+}
+
+.task-content {
+    flex: 1;
+    transition: all 0.3s ease;
+}
+
+.terminal-exercise .task-instruction {
+    font-weight: 500;
+    color: var(--secondary-color);
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+    transition: all 0.3s ease;
+}
+
+.terminal-exercise .task.completed .task-instruction {
+    font-size: 0.9rem; /* Smaller text when completed */
+    margin-bottom: 0.25rem; /* Less margin when completed */
+    color: #6c757d; /* Muted color when completed */
+}
+
+/* Hide hints and validation messages on completed tasks to save space */
+.terminal-exercise .task.completed .hint-button,
+.terminal-exercise .task.completed .hint,
+.terminal-exercise .task.completed .validation-message {
+    display: none;
+}
+
+/* Add a subtle completion indicator */
+.terminal-exercise .task.completed::after {
+    content: "✓ Completed";
+    font-size: 0.8rem;
+    color: #28a745;
+    font-weight: 500;
+    margin-left: auto;
+    padding: 0.25rem 0.5rem;
+    background: rgba(40, 167, 69, 0.1);
+    border-radius: 12px;
+}
+
+/* Smooth scrolling behavior for tasks section */
+.tasks-section {
+    scroll-behavior: smooth;
+}
+
+/* New active task animation */
+.terminal-exercise .task.active.new-active {
+    animation: newActiveTask 0.6s ease-out;
+}
+
+@keyframes newActiveTask {
+    0% {
+        transform: scale(0.95);
+        opacity: 0.7;
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1.02);
+        opacity: 1;
+    }
+}
+
+/* Completion animation */
+.terminal-exercise .task.just-completed {
+    animation: taskCompleted 0.8s ease-out;
+}
+
+@keyframes taskCompleted {
+    0% {
+        transform: scale(1.02);
+    }
+    30% {
+        transform: scale(1.08);
+        box-shadow: 0 6px 20px rgba(40, 167, 69, 0.3);
+    }
+    100% {
+        transform: scale(0.95);
+        opacity: 0.8;
+    }
+}
+
+/* Exercise Complete State */
+.exercise-complete {
+    text-align: center;
+    padding: 2rem;
+}
+
+.exercise-complete h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.back-to-exercises {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.2s;
+}
+
+.back-to-exercises:hover {
+    background: #2c974b;
+}
+
+/* Responsive Design for New Layout */
+@media (max-width: 1024px) {
+    .exercise-workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .terminal-section {
+        border-right: none;
+        border-bottom: 1px solid #e1e4e8;
+    }
+
+    .terminal-exercise .terminal-simulator {
+        height: 400px;
+    }
+
+    .tasks-section {
+        max-height: none;
+    }
+}
+
+@media (max-width: 768px) {
+    #exerciseContent {
+        padding: 0 1rem;
+    }
+
+    .exercise-header {
+        padding: 1.5rem;
+    }
+
+    .terminal-section,
+    .tasks-section {
+        padding: 1rem;
+    }
+
+    .terminal-exercise .terminal-simulator {
+        height: 300px;
+    }
+}
+
+/* VS Code GUI Exercise Styles */
+.vs-code-simulator {
+    margin: 2rem 0;
+    border: 2px solid #e1e4e8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.vs-code-interface {
+    display: flex;
+    min-height: 300px;
+}
+
+.activity-bar {
+    background: #2c2c2c;
+    width: 60px;
+    padding: 1rem 0.5rem;
+}
+
+.activity-icon {
+    width: 40px;
+    height: 40px;
+    background: #404040;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.activity-icon:hover {
+    background: #505050;
+}
+
+.sidebar {
+    background: #f3f3f3;
+    flex: 1;
+    padding: 1rem;
+}
+
+.source-control-panel h3 {
+    margin-bottom: 1rem;
+    color: var(--secondary-color);
+}
+
+.changes-list {
+    background: white;
+    border: 1px solid #e1e4e8;
+    border-radius: 4px;
+    padding: 1rem;
+}
+
+.change-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+}
+
+.file-name {
+    color: var(--secondary-color);
+}
+
+.stage-change-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+.step-list {
+    margin-top: 2rem;
+}
+
+.step {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.step-instruction {
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design for Exercise Cards */
+@media (max-width: 768px) {
+    .exercise-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .vs-code-interface {
+        flex-direction: column;
+    }
+
+    .activity-bar {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+    }
+}
+
 /* Exercise Styles */
 .exercise-container {
     background: white;

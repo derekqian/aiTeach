@@ -58,14 +58,14 @@
                     "content": "core-features/integrated-terminal.html"
                 },
                 {
-                    "id": "source-control",
-                    "title": "Source Control Tab",
-                    "content": "core-features/source-control.html"
-                },
-                {
                     "id": "git-commands",
                     "title": "Essential Git Commands",
                     "content": "core-features/git-commands.html"
+                },
+                {
+                    "id": "source-control",
+                    "title": "Source Control Tab",
+                    "content": "core-features/source-control.html"
                 }
             ]
         }

@@ -1,7 +1,12 @@
 // Function to load and insert navigation
 async function loadNavigation() {
     try {
-        const response = await fetch('/components/navigation.html');
+        // Determine if we're in a subdirectory by checking the path
+        const isInSubdirectory = window.location.pathname.includes('/teacher-resources/') ||
+                                 window.location.pathname.includes('/student-resources/');
+        const navPath = isInSubdirectory ? '../components/navigation.html' : 'components/navigation.html';
+
+        const response = await fetch(navPath);
         const html = await response.text();
         document.body.insertAdjacentHTML('afterbegin', html);
 

@@ -20,40 +20,9 @@ body {
     background-color: var(--background-color);
 }
 
-/* Navigation */
-.main-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: var(--nav-height);
-    background-color: var(--secondary-color);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 2rem;
-    color: white;
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
-.nav-links a {
-    color: white;
-    text-decoration: none;
-    margin-left: 2rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: var(--primary-color);
-}
-
 /* Main Content */
 main {
-    margin-top: var(--nav-height);
+    margin-top: 90px; /* Account for fixed navigation with padding */
     padding: 2rem;
 }
 
