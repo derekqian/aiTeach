@@ -45,6 +45,10 @@
                             <td>Check repository status</td>
                         </tr>
                         <tr>
+                            <td><code>git add filename</code></td>
+                            <td>Stage specific file</td>
+                        </tr>
+                        <tr>
                             <td><code>git add .</code></td>
                             <td>Stage all changes</td>
                         </tr>
@@ -65,24 +69,100 @@
                             <td>Create new branch</td>
                         </tr>
                         <tr>
+                            <td><code>git branch -d name</code></td>
+                            <td>Delete branch</td>
+                        </tr>
+                        <tr>
                             <td><code>git checkout name</code></td>
                             <td>Switch to branch</td>
+                        </tr>
+                        <tr>
+                            <td><code>git checkout -b name</code></td>
+                            <td>Create and switch to new branch</td>
+                        </tr>
+                        <tr>
+                            <td><code>git switch name</code></td>
+                            <td>Switch to branch (modern)</td>
+                        </tr>
+                        <tr>
+                            <td><code>git merge name</code></td>
+                            <td>Merge branch into current branch</td>
                         </tr>
                     </table>
 
                     <h3>Remote Operations</h3>
                     <table class="command-table">
                         <tr>
+                            <td><code>git remote -v</code></td>
+                            <td>View remote connections</td>
+                        </tr>
+                        <tr>
+                            <td><code>git remote add origin URL</code></td>
+                            <td>Add remote repository</td>
+                        </tr>
+                        <tr>
                             <td><code>git push</code></td>
                             <td>Upload changes</td>
+                        </tr>
+                        <tr>
+                            <td><code>git push origin branch</code></td>
+                            <td>Upload specific branch</td>
                         </tr>
                         <tr>
                             <td><code>git pull</code></td>
                             <td>Download changes</td>
                         </tr>
                         <tr>
+                            <td><code>git pull origin branch</code></td>
+                            <td>Download specific branch</td>
+                        </tr>
+                        <tr>
                             <td><code>git fetch</code></td>
                             <td>Check for changes</td>
+                        </tr>
+                    </table>
+
+                    <h3>Viewing Changes</h3>
+                    <table class="command-table">
+                        <tr>
+                            <td><code>git diff</code></td>
+                            <td>See unstaged changes</td>
+                        </tr>
+                        <tr>
+                            <td><code>git diff --staged</code></td>
+                            <td>See staged changes</td>
+                        </tr>
+                        <tr>
+                            <td><code>git diff HEAD~1</code></td>
+                            <td>Compare with previous commit</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log</code></td>
+                            <td>View commit history</td>
+                        </tr>
+                        <tr>
+                            <td><code>git log --oneline</code></td>
+                            <td>View compact commit history</td>
+                        </tr>
+                        <tr>
+                            <td><code>git show</code></td>
+                            <td>Show latest commit details</td>
+                        </tr>
+                    </table>
+
+                    <h3>Configuration</h3>
+                    <table class="command-table">
+                        <tr>
+                            <td><code>git config --global user.name "Name"</code></td>
+                            <td>Set your name</td>
+                        </tr>
+                        <tr>
+                            <td><code>git config --global user.email "email"</code></td>
+                            <td>Set your email</td>
+                        </tr>
+                        <tr>
+                            <td><code>git config --list</code></td>
+                            <td>View all settings</td>
                         </tr>
                     </table>
 
@@ -164,16 +244,32 @@
                 <h2>Troubleshooting Tips</h2>
                 <div class="tips-section">
                     <div class="tip">
-                        <h3>Undo Last Commit</h3>
+                        <h3>Undo Last Commit (Keep Changes)</h3>
                         <code>git reset --soft HEAD~1</code>
                     </div>
                     <div class="tip">
-                        <h3>Discard Changes</h3>
+                        <h3>Undo Last Commit (Discard Changes)</h3>
+                        <code>git reset --hard HEAD~1</code>
+                    </div>
+                    <div class="tip">
+                        <h3>Revert a Commit</h3>
+                        <code>git revert commit-hash</code>
+                    </div>
+                    <div class="tip">
+                        <h3>Discard Changes in File</h3>
                         <code>git checkout -- filename</code>
+                    </div>
+                    <div class="tip">
+                        <h3>Unstage File</h3>
+                        <code>git reset filename</code>
                     </div>
                     <div class="tip">
                         <h3>View Commit History</h3>
                         <code>git log --oneline</code>
+                    </div>
+                    <div class="tip">
+                        <h3>Change Remote URL</h3>
+                        <code>git remote set-url origin new-url</code>
                     </div>
                 </div>
             </div>
