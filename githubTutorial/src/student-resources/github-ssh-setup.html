@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub SSH Key Setup - Version Control Tutorial</title>
+    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/student-resources.css">
+    <link rel="stylesheet" href="../css/navigation.css">
+</head>
+<body>
+    <!-- Navigation will be loaded here -->
+
+    <main class="student-resources">
+        <section class="welcome-section">
+            <h1>GitHub SSH Key Setup</h1>
+            <p>Set up secure authentication between your computer and GitHub using SSH keys.</p>
+        </section>
+
+        <section class="reference-content">
+            <div class="reference-card">
+                <h2>What are SSH Keys?</h2>
+                <p>SSH keys provide a secure way to authenticate with GitHub without entering your password every time. Think of it as a special digital key that proves you are who you say you are.</p>
+            </div>
+
+            <div class="reference-card">
+                <h2>Setup Steps</h2>
+                <div class="command-section">
+                    <h3>Step 1: Generate SSH Key</h3>
+                    <p>Open your terminal and run this command:</p>
+                    <div class="code-block">
+                        <code>ssh-keygen -t ed25519 -C "your_email@example.com"</code>
+                    </div>
+                    <p class="step-note"><strong>Note:</strong> Replace <code>your_email@example.com</code> with your actual GitHub email address.</p>
+                    <p class="step-note">When prompted:</p>
+                    <ul>
+                        <li>Press <strong>Enter</strong> to accept the default file location</li>
+                        <li>Optionally, enter a passphrase for extra security (or press Enter to skip)</li>
+                    </ul>
+
+                    <h3>Step 2: Copy Your SSH Key</h3>
+                    <p>Display your public key with this command:</p>
+                    <div class="code-block">
+                        <code>cat ~/.ssh/id_ed25519.pub</code>
+                    </div>
+                    <p class="step-note">Copy the entire output (it should start with <code>ssh-ed25519</code>)</p>
+
+                    <h3>Step 3: Add Key to GitHub</h3>
+                    <ol class="workflow-steps">
+                        <li>Go to <a href="https://github.com/settings/keys" target="_blank">GitHub → Settings → SSH and GPG keys</a></li>
+                        <li>Click <strong>"New SSH key"</strong></li>
+                        <li>Give it a title (e.g., "My Laptop")</li>
+                        <li>Paste your SSH key into the "Key" field</li>
+                        <li>Click <strong>"Add SSH key"</strong></li>
+                    </ol>
+
+                    <h3>Step 4: Test Your Connection</h3>
+                    <p>Verify that everything works:</p>
+                    <div class="code-block">
+                        <code>ssh -T git@github.com</code>
+                    </div>
+                    <p class="step-note">You should see a message like: <em>"Hi username! You've successfully authenticated..."</em></p>
+                </div>
+            </div>
+
+            <div class="reference-card">
+                <h2>Using SSH with GitHub</h2>
+                <div class="tips-section">
+                    <div class="tip">
+                        <h3>Clone with SSH</h3>
+                        <p>When cloning repositories, use the SSH URL:</p>
+                        <code>git clone git@github.com:username/repository.git</code>
+                    </div>
+                    <div class="tip">
+                        <h3>Change Existing Repo to SSH</h3>
+                        <p>If you already cloned with HTTPS, switch to SSH:</p>
+                        <code>git remote set-url origin git@github.com:username/repository.git</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="reference-card">
+                <h2>Troubleshooting</h2>
+                <div class="tips-section">
+                    <div class="tip">
+                        <h3>Permission Denied Error</h3>
+                        <p>If you get "Permission denied", make sure:</p>
+                        <ul>
+                            <li>You copied the entire SSH key correctly</li>
+                            <li>You added the key to the correct GitHub account</li>
+                            <li>The key is in the default location (~/.ssh/id_ed25519.pub)</li>
+                        </ul>
+                    </div>
+                    <div class="tip">
+                        <h3>Multiple SSH Keys</h3>
+                        <p>To list all your SSH keys:</p>
+                        <code>ls -la ~/.ssh</code>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Version Control Tutorial Project</p>
+    </footer>
+    <script src="../js/navigation.js"></script>
+</body>
+</html>

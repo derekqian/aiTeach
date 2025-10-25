@@ -1,4 +1,4 @@
-# GitHub Tutorial Project Requirements Document
+# Version Control Tutorial Project Requirements Document
 
 ## Project Overview
 This project aims to create an interactive and engaging educational platform to teach middle and high school students how to use GitHub. The materials will be presented in a website format with slide-like features for classroom instruction and supplementary materials for student self-study.

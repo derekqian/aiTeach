@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Git & VS Code Quick Reference - GitHub Tutorial</title>
+    <title>Git & VS Code Quick Reference - Version Control Tutorial</title>
     <link rel="stylesheet" href="../css/styles.css">
     <link rel="stylesheet" href="css/student-resources.css">
     <link rel="stylesheet" href="../css/navigation.css">
@@ -83,6 +83,22 @@
                         <tr>
                             <td><code>git fetch</code></td>
                             <td>Check for changes</td>
+                        </tr>
+                    </table>
+
+                    <h3>GitHub</h3>
+                    <table class="command-table">
+                        <tr>
+                            <td><code>ssh-keygen -t ed25519 -C "your_email@example.com"</code></td>
+                            <td>Generate SSH key for GitHub authentication</td>
+                        </tr>
+                        <tr>
+                            <td><code>cat ~/.ssh/id_ed25519.pub</code></td>
+                            <td>Display SSH public key to copy</td>
+                        </tr>
+                        <tr>
+                            <td><code>ssh -T git@github.com</code></td>
+                            <td>Test SSH connection to GitHub</td>
                         </tr>
                     </table>
                 </div>
@@ -165,7 +181,7 @@
     </main>
 
     <footer>
-        <p>&copy; 2025 GitHub Tutorial Project</p>
+        <p>&copy; 2025 Version Control Tutorial Project</p>
     <script src="../js/navigation.js"></script>
 </body>
 </html>
